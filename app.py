@@ -1,5 +1,6 @@
 # Central Limit Theorem - from Theory to Code to App
 # Created by: Sergiu Iatco, date 27.07.2023
+# https://www.linkedin.com/in/sergiuiatco/
 import streamlit as st
 import numpy as np
 import scipy.stats as stats
