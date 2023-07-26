@@ -1,4 +1,3 @@
-
 # Central Limit Theorem - from Theory to Code to App
 # Created by: Sergiu Iatco, date 27.07.2023
 import streamlit as st
@@ -79,17 +78,16 @@ with st.sidebar:
     rb = ['Playground', 'Python code', 'Central Limit Theorem']
     selected_rb = st.radio('Select:', rb)
     # Sidebar controls
-    sl_num_simulations = st.slider('Population:',  min_value=1000, max_value=10000, value=100, step=100,
+    sl_num_simulations = st.slider('Number of simulations:',  min_value=1000, max_value=10000, value=100, step=100,
                                    key='k_sl_num_simulations')
-    sl_sample_size_percentage = st.slider('Sample size (%):', min_value=5, max_value=100, value=5, step=5,
-                                          key='k_sl_sample_size')
-    sample_size = int(sl_num_simulations * sl_sample_size_percentage / 100)
-    st.text(f"sample size: {sample_size}")
+    sl_sample_size = st.slider('Sample size:', min_value=5, max_value=100, value=5, step=5,
+                               key='k_sl_sample_size')
 
     st.markdown('📖 Read the [post](https://www.linkedin.com/feed/update/urn:li:activity:7089091830310477824/)')
 
 if selected_rb == 'Playground':
     st.header('Playground')
+    sample_size = sl_sample_size
     num_simulations = sl_num_simulations
     sample_means = simulate_sample_means(num_simulations, sample_size)
     plot_sample_distribution(sample_means)
