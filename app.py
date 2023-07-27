@@ -85,7 +85,7 @@ with st.sidebar:
     sl_sample_size = st.slider('Sample size:', min_value=5, max_value=100, value=5, step=5,
                                key='k_sl_sample_size')
 
-    st.markdown('📖 Read the [post](https://www.linkedin.com/feed/update/urn:li:activity:7089091830310477824/)')
+    st.markdown('📖 Read the [post](https://www.linkedin.com/feed/update/urn:li:activity:7090266140941127680)')
 
 if selected_rb == 'Playground':
     st.header('Playground')
